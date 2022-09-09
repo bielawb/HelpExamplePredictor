@@ -45,7 +45,7 @@ namespace PowerShell.PL.Net
         /// <summary>
         /// Gets the name of a subsystem implementation.
         /// </summary>
-        public string Name => "HelpExamples";
+        public string Name => "EWSPredictors";
 
         /// <summary>
         /// Gets the description of a subsystem implementation.
