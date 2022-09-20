@@ -33,7 +33,10 @@ namespace PowerShell.PL.Net
             }
             foreach (XmlNode node in nodeList)
             {
-                _examples.Add(node.InnerText.Replace(@"PS C:\> ", ""));
+                foreach (string line in node.InnerText.Replace(@"PS C:\> ", "").Split(Environment.NewLine))
+                {
+                    _examples.Add(line);
+                }
             }
         }
 
