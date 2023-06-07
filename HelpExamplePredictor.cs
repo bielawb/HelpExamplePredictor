@@ -64,7 +64,7 @@ namespace PowerShell.PL.Net
         /// <returns>An instance of <see cref="SuggestionPackage"/>.</returns>
         public SuggestionPackage GetSuggestion(PredictionClient client, PredictionContext context, CancellationToken cancellationToken)
         {
-            if (context.TokenAtCursor.TokenFlags == TokenFlags.CommandName)
+            if (context.TokenAtCursor != null && context.TokenAtCursor.TokenFlags == TokenFlags.CommandName)
             {
                 string command = context.TokenAtCursor.Text;
                 
